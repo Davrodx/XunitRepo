@@ -14,11 +14,8 @@ pool:
 
 
 variables:
-
   solution: '**/*.sln'
-
   buildPlatform: 'Any CPU'
-
   buildConfiguration: 'Release'
 
 
@@ -30,27 +27,19 @@ steps:
 
 
 - task: NuGetCommand@2
-
   inputs:
-
-    restoreSolution: '$(solution)'
+   restoreSolution: '$(solution)'
 
 
 
 - task: DotNetCoreCLI@2
-
   inputs:
-
     command: 'build'
-
-    projects: '*.csproj'
+    projects: 'CrisXUnitTests\*.csproj'
 
 
 
 - task: DotNetCoreCLI@2
-
   inputs:
-
-    command: 'test'
-
-    projects: 'CrisUnitTests\*.csproj'
+   command: 'test'
+   projects: 'CrisUnitTests\*.csproj'
