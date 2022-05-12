@@ -42,4 +42,4 @@ steps:
 - task: DotNetCoreCLI@2
   inputs:
    command: 'test'
-   projects: 'CrisUnitTests\*.csproj'
+   projects: 'CrisXUnitTests\*.csproj'
